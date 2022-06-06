@@ -1,38 +1,102 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  margin-bottom: 30px;
+  font-size: 100px;
+  font-weight: 100;
   text-align: center;
+  color: rgba(175, 47, 47, 0.15);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+}
+.todos-app {
+  padding: 20px;
+  width: 500px;
+  background: #fff;
+  position: relative;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 25px 50px 0 rgb(0 0 0 / 10%);
 }
 
-.App-link {
-  color: #61dafb;
+.todoInput {
+  width: 100%;
+}
+.new-todo {
+  width: 100%;
+  border: 1px solid #d4d4d4;
+  border-radius: 30px;
+  height: 30px;
+  font-size: 20px;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.footer > div > ul {
+  display: flex;
+  justify-content: space-around;
+}
+.footer > div > ul > li {
+  margin-left: 10px;
+  list-style-type: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.footer > div > ul > li:hover {
+  border: 1px solid #af2f2f1a;
+  border-radius: 5px;
+}
+
+.footer > div > ul > li.active {
+  border: 1px solid salmon;
+  border-radius: 5px;
+}
+
+.todoList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.todoList > .not-done {
+  padding: 10px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 20px;
+  cursor: pointer;
+}
+.todoList > .done {
+  padding: 10px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 20px;
+  text-decoration: line-through;
+  cursor: pointer;
+  color: #d9d9d9;
+}
+
+.clear-completed {
+  cursor: pointer;
+}
+.clear-completed:hover {
+  color: #d9d9d9;
 }
